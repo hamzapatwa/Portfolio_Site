@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Portfolio of Hamza Patwa" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamza Patwa | Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imgs/logo.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="background-shapes"></div>
+
+<!-- navbar -->
+<header class="header-glass">
+    <nav class="nav-container">
+        <div class="logo">
+            <a href="#hero">Hamza</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- hero -->
+<section id="hero">
+    <div class="hero-content">
+        <h1>Hello, I'm <span class="highlight">Hamza Patwa</span></h1>
+        <p>Computer Science Student & Aspiring Software Engineer</p>
+        <a href="#about" class="cta-button">View My Work</a>
+    </div>
+</section>
+
+<!-- about -->
+<section id="about" class="content-section glass-container">
+    <h2>About Me</h2>
+    <div class="about-wrapper">
+        <!-- headshot -->
+        <div class="profile-pic-container">
+            <br>
+            <img src="imgs/headshot.jpg" alt="Headshot of Hamza" class="profile-pic" />
+        </div>
+        <div class="about-text">
+            <p>
+                I'm a Computer Science major at CUNY Queens College (expected graduation December 2025).
+                I love creating efficient, scalable software and exploring AI, cloud computing, and more.
+            </p>
+            <p>
+                <strong>Skills:</strong> Java, C++, Python, JavaScript, HTML, CSS, SQL, Lua, Git, Flask, Node.js, MongoDB, Firebase,
+                Machine Learning, and more.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- experience -->
+<section id="experience" class="content-section">
+    <h2>Experience</h2>
+    <div class="card-container">
+
+        <!-- Psychiatreat -->
+        <div class="card">
+            <h3>Software Development Intern</h3>
+            <h4>Psychiatreat | Jan 2025 - Feb 2025</h4>
+            <ul>
+                <li>Developed an ETL pipeline in Python to extract, clean, and merge patient payment data from CSV files.</li>
+                <li>Contributed to API integrations for enhanced business platform interoperability.</li>
+                <li>Designed system workflows in Figma, optimizing internal processes and future dev.</li>
+            </ul>
+        </div>
+
+        <!-- RFCUNY -->
+        <div class="card">
+            <h3>Software Engineering Intern</h3>
+            <h4>Post-Quantum Cryptography & AI | Feb 2024 - Apr 2024</h4>
+            <ul>
+                <li>Created an automated cryptography algorithm testing tool using Python, reducing test execution time.</li>
+                <li>Researched deep learning and LLMs; presented findings to Dr. Delaram Kahrobaei.</li>
+                <li>Used Git for version control, boosting collaboration and project management.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="content-section glass-container">
+    <h2>Projects</h2>
+    <div class="card-container">
+
+        <!-- ML-Powered Stock Trading -->
+        <div class="card project-card">
+            <img src="imgs/stocks.jpg" alt="Stock Trading Project Screenshot" class="project-image"/>
+            <h3>ML-Powered Stock Trading & Backtesting</h3>
+            <p>
+                Built using Python, Flask, and various ML models (Logistic Regression, Random Forest, MLP).
+                Backtested strategies on 5 years of data with 50% higher returns than the S&P 500.
+            </p>
+            <a href="https://github.com/hamzapatwa/StockMarketML/tree/main" class="btn-link" target="_blank">GitHub Repo</a>
+        </div>
+
+        <!-- The Telemedicine App -->
+        <div class="card project-card">
+            <img src="imgs/telemedicine.jpg" alt="Telemedicine App Screenshot" class="project-image"/>
+            <h3>The Telemedicine App</h3>
+            <p>
+                Full-stack Next.js + Firebase + OpenAI API application providing real-time AI-driven medical assistance.
+                Implemented user auth and secure, real-time data management.
+            </p>
+            <a href="https://telemedappdeployment.vercel.app/" class="btn-link" target="_blank">Live Demo</a>
+        </div>
+
+        <!-- Internship Finder -->
+        <div class="card project-card">
+            <img src="imgs/internshipfinder.jpg" alt="Internship Finder Screenshot" class="project-image"/>
+            <h3>Internship Finder</h3>
+            <p>
+                A platform that helped 100+ students apply successfully for internships.
+                Utilizes Cheerio-based web-scraping for dynamic data and Firebase for secure storage.
+            </p>
+            <a href="https://github.com/hamzapatwa/hamzapatwa.github.io" class="btn-link" target="_blank">GitHub Repo</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="content-section">
+    <h2>Contact</h2>
+    <p>Have a question or want to work together?</p>
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:patwahamza02@gmail.com">patwahamza02@gmail.com</a>
+    </p>
+    <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/hamza-patwa" target="_blank">linkedin.com/in/hamza-patwa</a>
+    </p>
+    <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/hamzapatwa" target="_blank">github.com/hamzapatwa</a>
+    </p>
+    <p>
+        <strong>Resume:</strong>
+        <a href="https://drive.google.com/file/d/118i1ykvbDcm0vxRe9ZT-Oo8ATXIWbHpV/view" target="_blank">View My PDF Resume</a>
+    </p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Hamza Patwa. All Rights Reserved.</p>
+</footer>
+
+<!-- js -->
+<script src="script.js"></script>
+</body>
+</html>
