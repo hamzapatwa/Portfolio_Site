@@ -5,15 +5,26 @@
     box-sizing: border-box;
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
+:root {
+    --bg-color: white;
+    --text-color: black;
+}
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: black;
+        --text-color: white;
+    }
+}
 body {
     background: linear-gradient(45deg, #dfe9f3, #f3f7fa);
+    background-color: var(--bg-color);
     color: #333;
     position: relative;
     overflow-x: hidden; /* Prevent shapes from creating horizontal scroll bars */
 }
 
-/* 2. Abstract Floating Shapes (Behind Everything) */
+
 /* 1) The container that holds all circles */
 .background-shapes {
     position: fixed;
@@ -33,10 +44,7 @@ body {
     filter: blur(80px);
     opacity: 0.6;
     transform: translate(-50%, -50%);
-    /*
-      You can even animate these or vary them with
-      random durations if you want motion.
-    */
+
 }
 
 /* 3) Per-Color Classes */
@@ -81,7 +89,7 @@ body {
         display: block;       /* show the burger */
         font-size: 2rem;      /* bigger icon */
         cursor: pointer;      /* show hand on hover */
-        margin-right: 1rem;   /* some spacing if you like */
+        margin-right: 1rem;   /* some spacing */
     }
 
     /* Nav links (the UL) become hidden by default, shown by toggle */
@@ -105,18 +113,14 @@ body {
         text-align: center;  /* center each link in vertical layout */
     }
 
-    /* Optional: you can enlarge the links in mobile view if you want. */
+
     .nav-links a {
         display: block;      /* full “tappable” area */
         padding: 0.5rem 0;
     }
 }
 
-/*
-Note: We do NOT redefine .translucent-btn, .cta-button,
-or any other link styles you already have.
-This is purely for toggling layout on mobile.
-*/
+
 .nav-container {
     display: flex;
     align-items: center;
@@ -175,7 +179,7 @@ This is purely for toggling layout on mobile.
             0 4px 8px rgba(0, 0, 0, 0.1),
             inset 0 0 4px rgba(255, 255, 255, 0.3);
     border-radius: 8px;
-    color: #00a9ce; /* or #333, adjust to taste */
+    color: #252525; /* or #333, adjust to taste */
     text-decoration: none;
     font-weight: bold;
     padding: 0.75rem 1.25rem;
@@ -195,7 +199,7 @@ This is purely for toggling layout on mobile.
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: #cc6fe4;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 
 }
@@ -203,7 +207,7 @@ This is purely for toggling layout on mobile.
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #444;
+    color: #878787;
 }
 
 .highlight {
