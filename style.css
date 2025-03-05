@@ -6,7 +6,6 @@
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-
 body {
     background: linear-gradient(45deg, #dfe9f3, #f3f7fa);
     color: #333;
@@ -15,48 +14,37 @@ body {
 }
 
 /* 2. Abstract Floating Shapes (Behind Everything) */
+/* 1) The container that holds all circles */
 .background-shapes {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1; /* ensures shapes sit behind all other elements */
-    pointer-events: none; /* prevents clicking on them */
+    z-index: -1;           /* behind main content */
+    pointer-events: none;  /* no clicks on them */
+    overflow: hidden;      /* so circles don’t spill horizontally */
 }
 
-
-.background-shapes::before,
-.background-shapes::after {
-    content: "";
-    position: absolute;
+/* 2) Base circle shape & effects */
+.circle {
+    position: absolute;    /* so top/left can position it */
     border-radius: 50%;
     filter: blur(80px);
     opacity: 0.6;
     transform: translate(-50%, -50%);
+    /*
+      You can even animate these or vary them with
+      random durations if you want motion.
+    */
 }
 
-/* First shape: Aqua/blue-ish */
-.background-shapes::before {
-    width: 500px;
-    height: 500px;
-    top: 30%;
-    left: 20%;
-    background: #00a9ce; /* Vibrant aqua */
-}
+/* 3) Per-Color Classes */
+.circle-blue    { background: #00a9ce; }
+.circle-purple  { background: #cb6ce6; }
+.circle-orange  { background: #f08030; /* or another orange hex code */ }
 
-/* Second shape: Pinkish/purple pastel */
-.background-shapes::after {
-    width: 600px;
-    height: 600px;
-    top: 70%;
-    left: 80%;
-    background: #cb6ce6;
-}
-
-/* 3. Reusable frosted glass class just add class="frosted-glass")*/
-
-
+/* 3. Reusable frosted glass class just add class="frosted-glass" */
 .frosted-glass {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(12px);
@@ -118,7 +106,41 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
 
+/* Wrap the contact buttons */
+.hero-contact-buttons {
+    margin-top: 2rem; /* space between the hero text and buttons */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; /* center them horizontally */
+}
+
+/* Translucent button style */
+.translucent-btn {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+            0 4px 8px rgba(0, 0, 0, 0.1),
+            inset 0 0 4px rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: #00a9ce; /* or #333, adjust to taste */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.75rem 1.25rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect */
+.translucent-btn:hover {
+    transform: scale(1.08);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow:
+            0 8px 16px rgba(0, 0, 0, 0.15),
+            inset 0 0 8px rgba(255, 255, 255, 0.4);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .hero-content h1 {
@@ -180,6 +202,7 @@ body {
     align-items: center;
     gap: 2rem;
     flex-wrap: wrap;
+    font-size: 1.25rem;
 }
 
 .profile-pic-container {
@@ -207,6 +230,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    font-size: 1.25rem;
 }
 
 .card {
