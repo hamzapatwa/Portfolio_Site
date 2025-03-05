@@ -11,7 +11,29 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="background-shapes"></div>
+<!-- Added two black circles for contrast in the background -->
+<div class="background-shapes">
+    <!-- Blue Circles (3) -->
+    <div class="circle circle-blue" style="width: 150px; height: 150px; top: 20%; left: 15%;"></div>
+    <div class="circle circle-blue" style="width: 300px; height: 300px; top: 65%; left: 25%;"></div>
+    <div class="circle circle-blue" style="width: 200px; height: 200px; top: 80%; left: 80%;"></div>
+
+    <!-- Purple Circles (3) -->
+    <div class="circle circle-purple" style="width: 250px; height: 250px; top: 40%; left: 70%;"></div>
+    <div class="circle circle-blue" style="width: 400px; height: 400px; top: 25%; left: 50%;"></div>
+    <div class="circle circle-purple" style="width: 180px; height: 180px; top: 75%; left: 10%;"></div>
+
+    <!-- Black Circles (3) -->
+    <div class="circle circle-blue" style="width: 120px; height: 120px; top: 35%; left: 30%;"></div>
+    <div class="circle circle-purple" style="width: 300px; height: 300px; top: 10%; left: 90%;"></div>
+    <div class="circle circle-orange" style="width: 200px; height: 200px; top: 85%; left: 55%;"></div>
+
+    <!-- Orange Circles (3) -->
+    <div class="circle circle-orange" style="width: 250px; height: 250px; top: 50%; left: 85%;"></div>
+    <div class="circle circle-orange" style="width: 320px; height: 320px; top: 75%; left: 40%;"></div>
+    <div class="circle circle-orange" style="width: 150px; height: 150px; top: 15%; left: 5%;"></div>
+</div>
+
 
 <!-- navbar -->
 <header class="header-glass">
@@ -29,11 +51,27 @@
 </header>
 
 <!-- hero -->
+<!-- Hero Section (Combined with Contact) -->
 <section id="hero">
     <div class="hero-content">
         <h1>Hello, I'm <span class="highlight">Hamza Patwa</span></h1>
         <p>Computer Science Student & Aspiring Software Engineer</p>
-        <a href="#about" class="cta-button">View My Work</a>
+
+        <!-- Existing contact buttons (optional) -->
+        <div class="hero-contact-buttons">
+            <a href="mailto:patwahamza02@gmail.com" class="translucent-btn">Email</a>
+            <a href="https://www.linkedin.com/in/hamza-patwa" class="translucent-btn" target="_blank">LinkedIn</a>
+            <a href="https://github.com/hamzapatwa" class="translucent-btn" target="_blank">GitHub</a>
+            <a href="https://drive.google.com/file/d/118i1ykvbDcm0vxRe9ZT-Oo8ATXIWbHpV/view" class="translucent-btn" target="_blank">Resume</a>
+        </div>
+        <br>
+        <br>
+
+        <div class="hero-cta-bottom">
+            <a href="#about" class="translucent-btn large-cta">
+                View My Work
+            </a>
+        </div>
     </div>
 </section>
 
@@ -41,26 +79,29 @@
 <section id="about" class="content-section glass-container">
     <h2>About Me</h2>
     <div class="about-wrapper">
-        <!-- headshot -->
-        <div class="profile-pic-container">
-            <br>
-            <img src="imgs/headshot.jpg" alt="Headshot of Hamza" class="profile-pic" />
-        </div>
-        <div class="about-text">
-            <p>
-                I'm a Computer Science major at CUNY Queens College (expected graduation December 2025).
-                I love creating efficient, scalable software and exploring AI, cloud computing, and more.
-            </p>
-            <p>
-                <strong>Skills:</strong> Java, C++, Python, JavaScript, HTML, CSS, SQL, Lua, Git, Flask, Node.js, MongoDB, Firebase,
-                Machine Learning, and more.
-            </p>
-        </div>
+
+            <!-- headshot -->
+            <div class="profile-pic-container">
+                <br>
+                <img src="imgs/headshot.jpg" alt="Headshot of Hamza" class="profile-pic" />
+            </div>
+            <div class="about-text">
+                <p>
+                    I'm a Computer Science major at CUNY Queens College (expected graduation December 2025).
+                    I love creating efficient, scalable software and exploring AI, cloud computing, and more.
+                </p>
+                <p>
+                    <strong>Skills:</strong> Java, C++, Python, JavaScript, HTML, CSS, SQL, Lua, Git, Flask, Node.js, MongoDB, Firebase,
+                    Machine Learning, and more.
+
+                </p>
+            </div>
+
     </div>
 </section>
 
 <!-- experience -->
-<section id="experience" class="content-section">
+<section id="experience" class="content-section glass-container">
     <h2>Experience</h2>
     <div class="card-container">
 
