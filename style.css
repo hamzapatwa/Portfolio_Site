@@ -5,9 +5,20 @@
     box-sizing: border-box;
     font-family: "Helvetica Neue", Arial, sans-serif;
 }
+:root {
+    --bg-color: white;
+    --text-color: black;
+}
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: black;
+        --text-color: white;
+    }
+}
 body {
     background: linear-gradient(45deg, #dfe9f3, #f3f7fa);
+    background-color: var(--bg-color);
     color: #333;
     position: relative;
     overflow-x: hidden; /* Prevent shapes from creating horizontal scroll bars */
@@ -175,7 +186,7 @@ This is purely for toggling layout on mobile.
             0 4px 8px rgba(0, 0, 0, 0.1),
             inset 0 0 4px rgba(255, 255, 255, 0.3);
     border-radius: 8px;
-    color: #00a9ce; /* or #333, adjust to taste */
+    color: #252525; /* or #333, adjust to taste */
     text-decoration: none;
     font-weight: bold;
     padding: 0.75rem 1.25rem;
@@ -195,7 +206,7 @@ This is purely for toggling layout on mobile.
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: #cc6fe4;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 
 }
@@ -203,7 +214,7 @@ This is purely for toggling layout on mobile.
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: #444;
+    color: #878787;
 }
 
 .highlight {
