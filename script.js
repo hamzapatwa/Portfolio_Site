@@ -1,3 +1,4 @@
+//Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -42,6 +43,7 @@ window.addEventListener('resize', () => {
     }
 });
 
+//Automatic Dark mode!!!
 function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
